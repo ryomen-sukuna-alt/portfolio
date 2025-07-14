@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dverso studio - Web Design & Development</title>
+    <link rel="icon" href="./80d1c2f0-f05a-4157-a1f1-875b93d2f612.jpg" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #00f0ff, #5773ff, #ff007a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+        }
+        
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .glow {
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }</style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">dverso studio</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="hover:text-cyan-400 transition">Services</a>
+                <a href="#work" class="hover:text-cyan-400 transition">Work</a>
+                <a href="#about" class="hover:text-cyan-400 transition">About</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-pink-500 opacity-20 blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-5xl md:text-8xl font-bold mb-6">
+                <span class="gradient-text">creative</span>
+                <span class="block text-white">studio</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto mb-12">
+                specialized in immersive web design & development
+            </p>
+            
+            <div class="flex justify-center space-x-4 mb-20">
+                <a href="#contact" class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-semibold hover:opacity-90 transition">Get in touch</a>
+                <a href="#work" class="px-8 py-3 border border-white border-opacity-30 rounded-full font-semibold hover:bg-white hover:bg-opacity-10 transition">View work</a>
+            </div>
+            
+            <div class="scroll-down absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                <p class="text-gray-400 mb-2">SCROLL DOWN</p>
+                <i class="fas fa-chevron-down text-gray-400 text-xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Our <span class="gradient-text">Services</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-2xl project-card">
+                    <div class="w-14 h-14 rounded-full bg-cyan-500 bg-opacity-20 flex items-center justify-center mb-6 glow">
+                        <i class="fas fa-code text-2xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Development</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-cyan-400 mr-2"></i> Creative Coding</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-cyan-400 mr-2"></i> Web development</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-cyan-400 mr-2"></i> THREEjs lovers TM</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-cyan-400 mr-2"></i> E-commerce integrations</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-cyan-400 mr-2"></i> SEO optimizations</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-cyan-400 mr-2"></i> 3D Asset Optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="p-8 rounded-2xl project-card">
+                    <div class="w-14 h-14 rounded-full bg-pink-500 bg-opacity-20 flex items-center justify-center mb-6 glow">
+                        <i class="fas fa-paint-brush text-2xl text-pink-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Design</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-pink-400 mr-2"></i> Creative Direction</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-pink-400 mr-2"></i> Brand Identity Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-pink-400 mr-2"></i> Art Direction</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-pink-400 mr-2"></i> UI/UX Design</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-pink-400 mr-2"></i> 3D Asset Creation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Featured <span class="gradient-text">Work</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-2xl overflow-hidden">
+                    <div class="h-64 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                        <span class="text-4xl font-bold">Caffè Design</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Caffè Design Website 2025</h3>
+                        <p class="text-gray-400 mb-4">An immersive coffee experience with 3D elements</p>
+                        <a href="https://caffe.design" target="_blank" class="text-cyan-400 hover:underline flex items-center">
+                            View project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-2xl overflow-hidden">
+                    <div class="h-64 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <span class="text-4xl font-bold">BG Remove</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Background Remover Website 2025</h3>
+                        <p class="text-gray-400 mb-4">AI-powered background removal tool</p>
+                        <a href="https://tools.dverso.io/bgremove/" target="_blank" class="text-cyan-400 hover:underline flex items-center">
+                            View project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-2xl overflow-hidden">
+                    <div class="h-64 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <span class="text-4xl font-bold">JORD Golf</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">JORD Golf E-Commerce 2025</h3>
+                        <p class="text-gray-400 mb-4">Premium golf equipment online store</p>
+                        <a href="https://jordgolf.com/" target="_blank" class="text-cyan-400 hover:underline flex items-center">
+                            View project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card rounded-2xl overflow-hidden">
+                    <div class="h-64 bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center">
+                        <span class="text-4xl font-bold">BLDBLZ</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">BLDBLZ E-Commerce 2024</h3>
+                        <p class="text-gray-400 mb-4">Urban streetwear fashion platform</p>
+                        <a href="https://bldblz.com" target="_blank" class="text-cyan-400 hover:underline flex items-center">
+                            View project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+                <div class="project-card rounded-2xl overflow-hidden">
+                    <div class="h-64 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                        <span class="text-4xl font-bold">dverso</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">dverso Metaverse 2023</h3>
+                        <p class="text-gray-400 mb-4">Immersive 3D virtual world experience</p>
+                        <a href="https://dverso.io/map" target="_blank" class="text-cyan-400 hover:underline flex items-center">
+                            View project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+                <div class="project-card rounded-2xl border-2 border-dashed border-gray-700 flex items-center justify-center hover:border-cyan-400 transition">
+                    <div class="text-center p-8">
+                        <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-plus text-2xl text-gray-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">More Projects</h3>
+                        <p class="text-gray-400">Discover our full portfolio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="about" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-4xl font-bold mb-6">About <span class="gradient-text">dverso studio</span></h2>
+                    <p class="text-gray-300 mb-6">
+                        We are a creative studio specializing in immersive web experiences, combining cutting-edge technology with stunning design to create digital products that captivate and engage.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-gray-400">Based in</p>
+                            <p class="text-xl font-semibold">Milan, Italy</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Established</p>
+                            <p class="text-xl font-semibold">2022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="w-full h-80 md:h-96 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl overflow-hidden">
+                        
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-cube text-6xl text-white opacity-30"></i>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 rounded-full bg-pink-500 opacity-20 blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="contact" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center">Get in <span class="gradient-text">Touch</span></h2>
+            
+            <div class="max-w-2xl mx-auto bg-gray-800 bg-opacity-50 rounded-2xl p-8 project-card">
+                <form>
+                    <div class="mb-6">
+                        <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                        <input type="text" id="name" class="w-full bg-gray-700 bg-opacity-50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full bg-gray-700 bg-opacity-50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-300 mb-2">Your Message</label>
+                        <textarea id="message" rows="5" class="w-full bg-gray-700 bg-opacity-50 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="py-12 bg-black border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">dverso studio</a>
+                    <p class="text-gray-400 mt-2">© 2023 All rights reserved</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://x.com/" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="https://www.instagram.com/" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://dribbble.com/" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-dribbble text-xl"></i></a>
+                    <a href="https://github.com/" class="text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-github text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
